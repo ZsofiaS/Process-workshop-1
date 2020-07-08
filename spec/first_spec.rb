@@ -1,7 +1,8 @@
-require 'tenminute'
+require 'first'
 describe TenMinuteWalk do
   sample = ['w', 's', 'e', 'e', 'n', 'n', 'e', 's', 'w', 'w']
   it {is_expected.to respond_to(:checking).with(1).argument}
+  subject = TenMinuteWalk.new
 
   describe ' #checking' do
     it 'checks array size and returns size' do
@@ -19,8 +20,5 @@ describe TenMinuteWalk do
     it 'if the given array includes correct direction instructions' do
       expect(subject.direction_correct?(sample)).to equal true
     end
-
-
-
   end
 end
